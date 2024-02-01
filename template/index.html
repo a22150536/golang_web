@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <h2>{{.title}}</h2>
+    {{if .username}}
+    <p1>帳號: {{ .username }}   <button onclick="location.href='http://localhost:7777/admin'">後台頁面</button></p1>
+    <p1>腳色: {{.role}}</p1>
+
+    <h1>
+        <button onclick="location.href='http://localhost:7777/news?type=basketball'">籃球</button></p1>
+        <button onclick="location.href='http://localhost:7777/news?type=baseball'">棒球</button></p1>
+    </h1>
+    {{else}} 
+    <button onclick="location.href='http://localhost:7777/login'">登入頁面</button>
+    {{end}}
+
+</body>
+</html>

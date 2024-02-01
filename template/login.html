@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in page</title>
+</head>
+<body>
+    {{if .faillogin }}
+        <h1>登入失敗</h1>
+    {{end}}
+    <form action="/login" method="post">
+        用戶名:<input type="text" name="username"><br><br>
+        密碼:<input type="password" name="password"><br><br>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin page</title>
+</head>
+<body>
+    <h1>後台首頁</h1>
+    <p>{{.username}}</p>
+    <p>{{ .role }}</p>
+
+    {{if .username}}
+
+    <form action="/modifyUserButton" method="post">
+        <button type="submit">修改帳號密碼</button>
+    </form>
+    {{if .role }}
+    <form action="/addUserButton" method="get">
+        <button type="submit">添加帳號</button>
+    </form>
+    {{end}}
+    {{else}}
+    <p>請重新登入</p>  
+    <form action="/login" method="get">
+        <button type="submit">請重新登入</button>
+    </form>
+
+    {{end}}
+</body>
+</html>
